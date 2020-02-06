@@ -1,0 +1,1470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'UltraSystemSans';
+    src: url("../fonts/Ultra_System_Sans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'UltraSystemSansLineOne';
+    src: url("../fonts/Ultra_System_Sans_Line_One.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'UltraSystemSansLineTwo';
+    src: url("../fonts/Ultra_System_Sans_Line_Two.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'PolyItalic';
+    src: url("../fonts/Poly-Italic.otf") format("opentype");
+}
+
+html,
+body {
+    background-color: #111;
+    overflow: hidden !important;
+    position: relative;
+}
+
+audio {
+    display: none;
+}
+
+main {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 35px;
+    color: #D56C4A;
+    font-family: 'UltraSystemSans';
+}
+
+h2 {
+    font-size: 35px;
+    color: #D56C4A;
+    font-family: 'UltraSystemSansLineTwo';
+    transform: translateY(100vh);
+    margin: 5px 0px;
+}
+
+h3 {
+    font-size: 35px;
+    color: #D56C4A;
+    font-family: 'UltraSystemSans';
+}
+
+h4 {
+    font-size: 18px;
+    color: #E7E7E5;
+    font-family: 'UltraSystemSans';
+    padding: 10%;
+    text-align: center;
+}
+
+strong {
+    color: #D56C4A;
+}
+
+.instruccions {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #E7E7E5;
+    font-family: 'UltraSystemSans';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 10%;
+    line-height: 1.4;
+}
+
+.instruccions img {
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.opacityInstruccions {
+    width: 150%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    left: -1px;
+    top: 0;
+}
+
+.pantallaResponsiveNone {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    z-index: 100;
+}
+
+.pantallaResponsiveNone img {
+    width: 50%;
+}
+
+.absoluteCeci {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceci1 {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.ceci2 {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 25px;
+    color: #E7E7E5;
+}
+
+.ceci2 h1 {
+    font-size: 22px;
+    color: #E7E7E5;
+}
+
+.opacityResponsive {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+p {
+    color: #111;
+    font-size: 22px;
+    font-family: 'PolyItalic';
+}
+
+.frase-reset {
+    color: #E7E7E5;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(100vw, -50%);
+    width: 100%;
+    text-align: start;
+}
+
+.selected {
+    font-family: 'UltraSystemSans';
+}
+
+.ruleta {
+    display: none;
+}
+
+#container-ruleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.stopBoto {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 20%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.stop {
+    transform: translateY(100vh) rotate(-2deg);
+    width: 45%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.lletresStart {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lletresEnd {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.opacity0 {
+    transform: translate(0) !important;
+    margin: 3px 0px !important;
+    opacity: 0;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.minijoc-container {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transform: translate(100vw);
+}
+
+.transition {
+    transition: left .4s ease-in-out;
+}
+
+.minijoc {
+    float: left;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotate(-4deg);
+}
+
+.vertical-center {
+    position: relative;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.mt--15 {
+    margin-top: -10%;
+}
+
+.mb--15 {
+    margin-bottom: -10%;
+}
+
+.w-40 {
+    width: 45% !important;
+    height: auto;
+    cursor: pointer;
+}
+
+.w-50 {
+    width: 50%;
+    height: auto;
+}
+
+.w-80 {
+    width: 80%;
+    height: auto;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #111;
+}
+
+.w-90 {
+    width: 90%;
+    height: auto;
+}
+
+.w-100 {
+    width: 100%;
+    height: auto;
+}
+
+.w-150 {
+    width: 150%;
+    height: auto;
+}
+
+.cercle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 70%;
+    cursor: pointer;
+}
+
+.flecha-down {
+    height: 22%;
+    margin-right: 30%;
+    transform: rotate(180deg);
+}
+
+.continer-img {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.continer-img + img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+
+.titulo-carrosuel {
+    top: 27.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-1deg);
+    position: absolute;
+    z-index: 1;
+    width: 70%;
+    text-align: center;
+}
+
+.continer-img + h2 {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+
+.continer-img2 {
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continer-img2 + img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+    width: 30%;
+    cursor: pointer;
+}
+
+.continer-img3 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    z-index: 1;
+    transform: translateY(100vh);
+}
+
+.continer-img3 + p {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.absoluteimg {
+    width: 100%;
+    height: 85%;
+    display: none;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(100vw, -50%);
+    z-index: 2;
+}
+
+.minijuegos {
+    position: fixed;
+    top: 11%;
+    left: 48%;
+    transform: translate(100vw, -50%) rotate(-4deg);
+    width: 75%;
+}
+
+.dadosimg {
+    position: absolute;
+    z-index: 1;
+    top: 62.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+    width: 50%;
+}
+
+.tragaperrasimg {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-2deg);
+    width: 60%;
+}
+
+.logo {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(50vw, 0);
+    width: calc(90px + (170 - 90) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.flecha-frase {
+    width: 40%;
+    margin-top: 2rem;
+    transform: translateY(100vh);
+    cursor: pointer;
+}
+
+.frase {
+    display: none;
+}
+
+.cancion {
+    transform: translate(100vw, -100vh);
+    display: none;
+    background-image: url(../img/fondo_cancion.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.cancion-svg {
+    width: 65%;
+    transform: rotate(-1deg);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.row img {
+    width: 50%;
+}
+
+.column img {
+    width: 25%;
+}
+
+.mt-30 {
+    margin: 10px 0;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    z-index: 3;
+}
+
+#click {
+    cursor: pointer;
+}
+
+.opacity-absolute {
+    width: 100vw;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.center-paper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 200%;
+    transform: translate(-50%, -50%);
+}
+
+#load {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 45%;
+    transform: translate(-50%, -50%) rotate(5deg);
+    cursor: pointer;
+}
+
+@media (min-width: 360px) {
+    .center-paper {
+        top: 42%;
+        width: 160%;
+    }
+
+    .instruccions {
+        font-size: 13px;
+    }
+
+    .minijuegos {
+        top: 13%;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .w-80 {
+        font-size: 17px;
+    }
+
+    .w-90 {
+        width: 80%;
+    }
+
+    .titulo-carrosuel {
+        width: 65%;
+    }
+
+    .dadosimg {
+        width: 45%;
+    }
+
+    .tragaperrasimg {
+        width: 50%;
+    }
+
+    .mt--15 {
+        margin-top: -15%;
+    }
+
+    .mb--15 {
+        margin-bottom: -15%;
+    }
+}
+
+@media (min-width: 375px) {
+    .center-paper {
+        top: 42%;
+        width: 185%;
+    }
+
+    .instruccions {
+        font-size: 15px;
+    }
+
+    .minijuegos {
+        top: 15%;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .w-40 {
+        width: 50% !important;
+        height: auto;
+    }
+
+    .w-80 {
+        font-size: 20px;
+    }
+
+    .w-90 {
+        width: 85%;
+    }
+
+    .mt-30 {
+        margin: 20px 0;
+    }
+
+    .frase-reset {
+        font-size: 22px;
+    }
+
+    .absoluteimg {
+        height: 80%;
+    }
+
+    .stop {
+        width: 50%;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 400px) {
+    .center-paper {
+        top: 41%;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    .w-80 {
+        font-size: 21px;
+    }
+
+    .w-90 {
+        width: 80%;
+    }
+
+    .minijuegos {
+        top: 13%;
+    }
+
+    .titulo-carrosuel {
+        width: 60%;
+    }
+
+    .dadosimg {
+        width: 40%;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .center-gif {
+        width: 70%;
+    }
+
+    .center-paper {
+        top: 41%;
+        width: 150%;
+    }
+
+    #load {
+        width: 35%;
+    }
+
+    .instruccions {
+        font-size: 18px;
+    }
+
+    .instruccions img {
+        width: 30%;
+    }
+
+    .stop {
+        width: 35%;
+    }
+
+    .w-90 {
+        width: 60%;
+    }
+
+    .minijuegos {
+        width: 60%;
+    }
+
+    .dadosimg {
+        width: 35%;
+    }
+
+    .titulo-carrosuel {
+        width: 45%;
+    }
+
+    .tragaperrasimg {
+        width: 45%;
+    }
+
+    h2 {
+        font-size: 50px;
+        margin: 10px 0px;
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    .continer-img2 {
+        width: 65%;
+    }
+
+    .stop {
+        width: 55%;
+    }
+
+    .cercle {
+        width: 60%;
+    }
+
+    .w-150 {
+        width: 90%;
+    }
+
+    .continer-img3 + p {
+        width: 70%;
+    }
+
+    .flecha-frase {
+        width: 25%;
+        margin-top: 3rem;
+    }
+
+    .frase-reset {
+        font-size: 24px;
+    }
+
+    .w-80 {
+        font-size: 24px;
+        padding: 8px 0;
+    }
+
+    .cancion-svg {
+        width: 55%;
+    }
+
+    .row img {
+        width: 45%;
+    }
+
+    .column img {
+        width: 22.5%;
+    }
+
+    .w-40 {
+        width: 40% !important;
+    }
+
+    .logo {
+        bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .center-paper {
+        width: 120%;
+    }
+
+    #load {
+        width: 30%;
+    }
+
+    .instruccions {
+        font-size: 22px;
+    }
+
+    .instruccions img {
+        margin-top: 5rem;
+    }
+
+    .stop {
+        width: 55%;
+    }
+
+    .w-90 {
+        width: 65%;
+    }
+
+    h3 {
+        font-size: 60px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    .cercle {
+        width: 45%;
+    }
+
+    .flecha-down {
+        height: 20%;
+    }
+
+    .w-150 {
+        width: 80%;
+    }
+
+    .continer-img3 + p {
+        width: 60%;
+    }
+
+    h4 {
+        padding: 15%;
+    }
+
+    .frase-reset {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .w-40 {
+        width: 35% !important;
+    }
+
+    .w-80 {
+        font-size: 26px;
+        padding: 10px 0;
+        width: 50%;
+    }
+
+    .column img {
+        width: 20%;
+    }
+
+    .row img {
+        width: 40%;
+    }
+
+    .column {
+        margin-top: 20px;
+    }
+
+    .cancion {
+        background-position: 45% 50%;
+        background-size: 340%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 800px) {
+    .center-paper {
+        width: 130%;
+        top: 42%;
+    }
+
+    .instruccions {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 65px;
+    }
+
+    h3 {
+        font-size: 65px;
+    }
+
+    .continer-img2 {
+        width: 70%;
+    }
+
+    .w-80 {
+        font-size: 31px;
+        padding: 15px 0;
+    }
+
+    .w-90 {
+        width: 70%;
+    }
+
+    .mt-30 {
+        margin: 30px 0;
+    }
+
+    .column {
+        margin-top: 30px;
+    }
+
+    .cancion {
+        background-position: 45% 50%;
+        background-size: 400%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 1024px) {
+    .continer-img2 {
+        width: 65%;
+    }
+
+    .continer-img2 + img {
+        width: 25%;
+    }
+
+    h4 {
+        padding: 0 23%;
+    }
+
+    p {
+        font-size: 40px;
+    }
+
+    .flecha-frase {
+        width: 20%;
+        margin-top: 5rem;
+        font-size: 35px;
+    }
+
+    .mt-30 {
+        margin: 20px 0;
+    }
+
+    .row {
+        width: 65%;
+    }
+
+    .resp-50 {
+        width: 80%;
+    }
+
+    .w-80 {
+        width: 65%;
+        font-size: 32px;
+        padding: 15px 0;
+    }
+
+    .cancion {
+        background-position: 47% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .cancion-svg {
+        width: 45%;
+    }
+}
+
+
+@media screen and (min-width: 568px) and (orientation:landscape) {
+
+    .pantallaResponsiveNone {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation:landscape) {
+    .pantallaResponsiveNone {
+        display: none;
+    }
+
+    .center-paper {
+        width: 50%;
+        top: 43%;
+    }
+
+    .center-gif {
+        width: 30%;
+    }
+
+    .instruccions {
+        font-size: 18px;
+    }
+
+    .instruccions img {
+        width: 20%;
+    }
+
+    .w-80 {
+        font-size: 22px;
+        padding: 10px 0;
+        width: 40%;
+    }
+
+    .w-90 {
+        width: 37%;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    h4 {
+        font-size: 20px;
+        padding: 0 30%;
+    }
+
+    .continer-img2 {
+        width: 65%;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .continer-img3 + p {
+        width: 30%;
+    }
+
+    .flecha-frase {
+        width: 13%;
+        margin-top: 5rem;
+    }
+
+    .frase-reset {
+        font-size: 20px;
+    }
+
+    .cancion {
+        background-position: 43%;
+        background-size: 200%;
+        background-repeat: no-repeat;
+    }
+
+    .titulo-carrosuel {
+        width: 25%;
+    }
+
+    .minijuegos {
+        display: flex;
+        width: 30%;
+    }
+
+    #load {
+        width: 15%;
+    }
+
+    .dadosimg {
+        width: 20%;
+    }
+
+    .stop {
+        width: 45%;
+        margin: 1.5rem;
+    }
+
+    .stopBoto {
+        width: 25%;
+    }
+
+    .logo {
+        bottom: 1rem;
+        width: 80px;
+    }
+
+    .cercle {
+        width: 23%;
+    }
+
+    .continer-img2 {
+        width: 65%;
+    }
+
+    .absoluteimg {
+        width: 50%;
+    }
+
+    .continer-img2 + img {
+        width: 25%;
+    }
+
+    .w-150 {
+        width: 40%;
+    }
+
+    .mt-30 {
+        margin: 0 0 10px 0;
+    }
+
+    .row img {
+        width: 40%;
+    }
+
+    .cancion-svg {
+        width: 25%;
+    }
+
+    .row {
+        display: flex;
+        width: 40%;
+        margin: 1rem 0 0 0;
+    }
+
+    .w-40 {
+        width: 35% !important;
+    }
+
+    .mt--15 {
+        margin-top: -10%;
+    }
+
+    .mb--15 {
+        margin-bottom: -10%;
+    }
+
+    .column img {
+        width: 20%;
+    }
+
+    .column {
+        margin-top: 0;
+    }
+
+    .resp-50 {
+        width: 50%;
+    }
+
+    .tragaperrasimg {
+        width: 25%;
+    }
+
+    .flex-start {
+        display: flex;
+    }
+
+    .flex-end {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    #load {
+        width: 13%;
+    }
+
+    .instruccions {
+        padding: 0 20%;
+    }
+
+    .instruccions img {
+        margin-top: 2rem;
+    }
+
+    .minijuegos {
+        width: 25%;
+    }
+
+    .stop {
+        width: 50%;
+    }
+
+    .center-paper {
+        width: 50%;
+        top: 43%;
+    }
+
+    .center-gif {
+        width: 35%;
+    }
+
+    .w-90 {
+        width: 40%;
+    }
+
+    .dadosimg {
+        width: 20%;
+    }
+
+    .titulo-carrosuel {
+        width: 30%;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        padding: 0 30%;
+        font-size: 25px;
+    }
+
+    .cancion {
+        background-position: 45% 25%;
+        background-size: 170%;
+        background-repeat: no-repeat;
+    }
+
+    .continer-img2 {
+        width: 60%;
+    }
+
+    .absoluteimg {
+        width: 45%;
+    }
+
+    .cercle {
+        width: 20%;
+    }
+
+    .flecha-frase {
+        width: 10%;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .frase-reset {
+        font-size: 25px;
+    }
+
+    .row img {
+        width: 30%;
+    }
+
+    .column img {
+        width: 15%;
+    }
+
+    .w-40 {
+        width: 30% !important;
+    }
+
+    .w-80 {
+        font-size: 22px;
+        padding: 15px 0;
+        width: 35%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cancion {
+        background-size: 200%;
+    }
+
+    .continer-img2 {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cancion {
+        background-size: 200%;
+    }
+
+    .instruccions {
+        font-size: 22px;
+    }
+
+    .continer-img2 {
+        width: 65%;
+    }
+
+    .w-90 {
+        width: 50%;
+    }
+
+    .titulo-carrosuel {
+        width: 40%;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    .dadosimg {
+        width: 25%;
+    }
+
+    .tragaperrasimg {
+        width: 30%;
+    }
+
+    h4 {
+        padding: 0px 35%;
+
+    }
+}
+
+@media (min-width: 1800px) {
+    .center-paper {
+        width: 45%;
+        top: 43%;
+    }
+
+    .instruccions {
+        font-size: 25px;
+    }
+
+    .instruccions img {
+        margin-top: 3rem;
+    }
+
+    .logo {
+        bottom: 2rem;
+        width: 150px;
+    }
+
+    .w-90 {
+        width: 60%;
+    }
+
+    .titulo-carrosuel {
+        width: 45%;
+    }
+
+    .dadosimg {
+        width: 30%;
+    }
+
+    h3 {
+        font-size: 55px;
+    }
+
+    h3 {
+        font-size: 60px;
+    }
+
+    h4 {
+        font-size: 30px;
+        padding: 0px 30%;
+    }
+
+    .tragaperrasimg {
+        width: 40%;
+    }
+
+    .continer-img2 {
+        width: 60%;
+    }
+
+    .w-150 {
+        width: 50%;
+    }
+
+    .continer-img3 + p {
+        width: 40%;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    h4 {
+        padding: 0px 30%;
+    }
+
+    .cancion {
+        background-position: 42% 50%;
+        background-size: 160%;
+    }
+
+    .w-80 {
+        font-size: 30px;
+        width: 30%;
+    }
+
+    .cancion-svg {
+        width: 20%;
+    }
+
+}

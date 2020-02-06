@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="64x64">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.hammerjs/2.0.0/jquery.hammer.js"></script>
+</head>
+
+<body>
+    <audio src="" id="audio"></audio>
+    <audio src="" id="song"></audio>
+    <div class="pantallaResponsiveNone">
+        <div class="absoluteCeci">
+            <div class="ceci1">
+                <h1>¡DALE LA<br>VUELTA!</h1>
+            </div>
+            <div class="ceci2">
+                <h1>RESOLUCIÓN<br>DE PANTALLA<br>NO ADMITIDA</h1>
+            </div>
+        </div>
+        <div class="opacityResponsive"></div>
+        <img src="img/ceci.gif" alt="">
+    </div>
+
+    <div class="loading">
+        <img class="center-paper" src="img/paperLoad.png" alt="">
+        <img class="center-gif" src="img/gifSCRAP.gif" alt="">
+        <img id="load" src="img/TryMe.svg" alt="">
+    </div>
+    <div class="instruccions"><strong>SCRAP es una experiencia excitante y un tanto delirante🔥 que te enseñará un poco de la cultura musical urbana en la actualidad.</strong><br><br>Por favor atienda a las siguientes recomendaciones:<br><br>⚠ No es recomendable para la gente sensible.<br><br>⚠ Hay que tomárselo como un enriquecimiento cultural.<br><br>⚠ Minijuegos, drogas, trap... ¿Qué puede salir mal?
+        <img src="img/flecha.svg" alt="">
+        <div class="opacityInstruccions"></div>
+    </div>
+
+    <main>
+        <img src="img/minijocs.svg" class="minijuegos">
+        <div class='carousel'>
+            <ul class='minijoc-container'>
+                <li id="minijoc1" class='minijoc'>
+                    <div class='vertical-center'>
+                        <div class="continer-img">
+                            <div class="continer-img">
+                                <img id="click" onclick="creaFrase()" class="w-90" src="img/fondo_full.png" alt="">
+                            </div>
+                            <h3 id="click" onclick="creaFrase()" class="titulo-carrosuel">RULETA</h3>
+                            <img id="click" onclick="creaFrase()" class="titulo-carrosuel" src="img/cercle_carrousel.svg" alt="">
+                            <img id="click" onclick="creaFrase()" class="dadosimg" src="img/ruleta.svg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li id="minijoc2" class='minijoc'>
+                    <div class='vertical-center'>
+                        <div class="continer-img">
+                            <div class="continer-img">
+                                <img class="w-90" src="img/fondo_full.png" alt="">
+                            </div>
+                            <h3 class="titulo-carrosuel">DADOS</h3>
+                            <img class="titulo-carrosuel" src="img/cercle_carrousel.svg" alt="">
+                            <img class="dadosimg" src="img/dados.svg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li id="minijoc3" class='minijoc'>
+                    <div class='vertical-center'>
+                        <div class="continer-img">
+                            <div class="continer-img">
+                                <img class="w-90" src="img/fondo_full.png" alt="">
+                            </div>
+                            <h3 class="titulo-carrosuel">TRAGA-<br>PERRAS</h3>
+                            <img class="titulo-carrosuel" src="img/cercle_carrousel.svg" alt="">
+                            <img class="tragaperrasimg" src="img/tragaperras.svg" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="ruleta"></section>
+        <section class="frase"></section>
+        <section class="cancion"></section>
+        <img class="logo" src="img/logo_light.svg" alt="">
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
